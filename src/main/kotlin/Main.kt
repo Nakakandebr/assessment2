@@ -1,14 +1,8 @@
 
-
-
-
-
-
-
 fun main(){
     getmultiples()
+    isValidPassword("1478sgtwe")
     var currentAccount=CurrentAccount("19000342ARC","Nakakande Bridget",456798.00)
-
     currentAccount.details()
     currentAccount.deposit(24987.0)
     currentAccount.withdrawal(2564.0)
@@ -19,15 +13,15 @@ fun main(){
 // write and invoke one function that takes in a random string and returns the
 //following values: first character, last character, length of the string and
 //whether it begins with a vowel or not. (6pts)
+data class get(var word:String)
+fun randomString(word:String){
+val getfirst=word[0]
+val getlast=word.length
 
-//
-//data class Get (var word:String)
-//fun randomString():Get{
-//    val getLast=
-//
-//
-//
-//}
+    val  gatall=(getfirst,getlength)
+return gatall
+
+}
 
 
 
@@ -37,18 +31,19 @@ fun main(){
 //2. Must be at most 16 characters long
 //3. Must not be “password”
 //4. Must contain a digit
-fun isValidPassword(password:String) {
- if (password.length < 8 || password.length > 16) {
-//    return false; // password length must be between 8 and 16 characters
-//  }
-//  if (password.toLowerCase() === "password") {
-//    return false; // password cannot be "password" (case-insensitive)
-//  }
-//  if (!/\d/.test(password)) {
-//    return false; // password must contain at least one digit
-//  }
-//  return true; // password meets all conditions
-//}
+fun isValidPassword(password:String) :Boolean{
+ if (password.length in 8..16  && password.toLowerCase()==="password" ) {
+     return true
+  }
+    else if (!/\d/.test(password)){
+
+
+
+
+    }
+
+
+
 //Your function should determine whether the password provided is valid or not.
 //The function returns true/false (7pts)
 
